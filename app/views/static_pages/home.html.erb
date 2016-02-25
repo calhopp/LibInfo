@@ -1,6 +1,9 @@
 <iframe id="forecast_embed" type="text/html" frameborder="1" height="230" width="50%" src="http://forecast.io/embed/#lat=35.1504&lon=-93.8072&name=Magazine, Arkansas&color=#00aaff&font=Georgia&units=us"> </iframe>
-<iframe src="http://www.google.com/uds/modules/elements/newsshow/iframe.html?format=300x250"
- frameborder="0" width="300" height="250"
- marginwidth="0" marginheight="0">
-</iframe>
-
+<%= @title %>
+<%= link_to @feedurl %>
+<% @entries.each do |entry| %>
+	<%= entry.title %>
+	<%= link_to "Article", entry.url %>
+	<%= entry.published %>
+	<%== entry.summary %>
+<% end %>
