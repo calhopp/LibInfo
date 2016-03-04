@@ -1,9 +1,13 @@
-<iframe id="forecast_embed" type="text/html" frameborder="1" height="230" width="50%" src="http://forecast.io/embed/#lat=35.1504&lon=-93.8072&name=Magazine, Arkansas&color=#00aaff&font=Georgia&units=us"> </iframe>
-<%= @title %>
-<%= link_to @feedurl %>
-<% @entries.each do |entry| %>
-	<%= entry.title %>
-	<%= link_to "Article", entry.url %>
-	<%= entry.published %>
-	<%== entry.summary %>
-<% end %>
+<iframe id="forecast_embed" type="text/html" frameborder="1" height="230" width="700" src="http://forecast.io/embed/#lat=35.1504&lon=-93.8072&name=Magazine, Arkansas&color=#00aaff&font=Georgia&units=us"> </iframe>
+<div width="700">
+	<%= @title %>
+	<%= link_to @feedurl %>
+	<p>
+		<% @entries.each do |entry| %>
+			<%= entry.title %>
+			<%= link_to "Article", entry.url %>
+			<%= entry.published %>
+			<%== entry.summary %>
+		<% end %>
+	</p>
+</div>

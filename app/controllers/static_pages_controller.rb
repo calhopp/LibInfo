@@ -5,7 +5,7 @@ class StaticPagesController < ApplicationController
 		@feed = Feedjira::Feed.fetch_and_parse url
 		@title = @feed.title
 		@feedurl = @feed.url
-		@entries = @feed.entries
+		@entries = @feed.entries.first(4)
 	end
 
 end
