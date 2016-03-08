@@ -6,6 +6,8 @@ class StaticPagesController < ApplicationController
 		@title = @feed.title
 		@feedurl = @feed.url
 		@entries = @feed.entries.first(4)
+		@breakfast = Breakfast.where(:date => Date.today..Date.tomorrow)
+		@lunch = Lunch.where(:date => Date.today..Date.tomorrow)
 	end
 
 end

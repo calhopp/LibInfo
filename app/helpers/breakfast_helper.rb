@@ -1,0 +1,2 @@
+module BreakfastHelper
+end
