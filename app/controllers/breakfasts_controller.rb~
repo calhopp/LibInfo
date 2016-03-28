@@ -1,5 +1,0 @@
-class BreakfastController < ApplicationController
-	def new
-		@breakfast = Breakfast.new
-	end
-end
